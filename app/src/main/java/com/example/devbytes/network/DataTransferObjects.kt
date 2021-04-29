@@ -1,6 +1,7 @@
 package com.example.devbytes.network
 
 
+import com.example.devbytes.database.DatabaseVideo
 import com.example.devbytes.domain.Video
 import com.squareup.moshi.JsonClass
 
@@ -28,4 +29,16 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
             thumbnail = it.thumbnail
         )
     }
+}
+
+fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo>{
+    return videos.map {
+        DatabaseVideo(
+            title = it.title,
+            description = it.description,
+            url = it.url,
+            update = it.update,
+            thumbnail = it.thumbnail
+        )
+    }.toTypedArray()
 }
