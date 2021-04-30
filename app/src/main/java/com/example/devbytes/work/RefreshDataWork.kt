@@ -21,5 +21,7 @@ class RefreshDataWork(appContext: Context, params: WorkerParameters): CoroutineW
         }
     }
 
-
+    companion object{
+        const val WORK_NAME = "RefreshDataWorker"
+    }
 }

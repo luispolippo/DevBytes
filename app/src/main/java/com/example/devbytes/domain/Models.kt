@@ -6,7 +6,7 @@ data class Video(
     val title: String,
     val description: String,
     val url: String,
-    val update: String,
+    val updated: String,
     val thumbnail: String
 ) {
     val shortDescription: String

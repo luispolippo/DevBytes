@@ -14,7 +14,7 @@ data class NetworkVideo(
     val title: String,
     val description: String,
     val url: String,
-    val update: String,
+    val updated: String,
     val thumbnail: String,
     val closedCaption: String?
 )
@@ -25,7 +25,7 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
             title = it.title,
             description = it.description,
             url = it.url,
-            update = it.update,
+            updated = it.updated,
             thumbnail = it.thumbnail
         )
     }
@@ -37,7 +37,7 @@ fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo>{
             title = it.title,
             description = it.description,
             url = it.url,
-            update = it.update,
+            updated = it.updated,
             thumbnail = it.thumbnail
         )
     }.toTypedArray()

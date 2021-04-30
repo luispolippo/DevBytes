@@ -8,7 +8,7 @@ import com.example.devbytes.domain.Video
 data class DatabaseVideo constructor(
     @PrimaryKey
     val url: String,
-    val update: String,
+    val updated: String,
     val title: String,
     val description: String,
     val thumbnail: String
@@ -20,7 +20,7 @@ fun List<DatabaseVideo>.asDomainModel(): List<Video>{
             url = it.url,
             title = it.title,
             description = it.description,
-            update = it.update,
+            updated = it.updated,
             thumbnail = it.thumbnail
         )
     }
